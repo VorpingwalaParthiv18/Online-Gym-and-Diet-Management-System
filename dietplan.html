@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diet Plans</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="diet-style.css">
+    
+</head>
+<body>
+    
+
+    
+ 
+    
+<div class="container">
+    <div class="logo"> <img src="login-logo-removebg.jpg" class="logo"> </div>
+<i><h1>Start Fitting<span>Yourself</span></h1></i>
+
+    <div class="price-toggler">
+        <span class="month active">monthly</span>
+        <span class="year">yearly</span>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="month"><span><h3>3-Months</h3></span></div>
+            <div class="year"><span><h3>1-Year</h3></span></div>
+            <div class="price month"><span>₹</span>300.<span>00</span></div>
+            <div class="price year"><span>₹</span>2500.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> ALL FRUITS EXCEPT BANANA </p>
+                <p> <i class="fas fa-check"></i> ALL VEGETABLES EXCEPT POTATOES  </p>
+                <p> <i class="fas fa-check"></i> ALL FRUITS/VEGGIES EXCEPT POTATO/BANANA </p>
+                <p> <i class="fas fa-check"></i> 8 BANANAS AND 3 CUPS LOW FAT MILK </p>
+                <p> <i class="fas fa-check"></i> CHICKPEAS SALAD AND TOMATOES </p>
+                <p> <i class="fas fa-check"></i> BROCCOLI AND BROWN BREAD WITH PEANUT BUTTER </p>
+                <p> <i class="fas fa-check"></i> BROWN RICE AND VEGGIES/FRUITS </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            
+            <div class="month"><span><h3>6-Months</h3></span></div>
+            <div class="year"><span><h3>2-Years</h3></span></div>
+            <div class="price month"><span>₹</span>350.<span>00</span></div>
+            <div class="price year"><span>₹</span>3500.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> ALL FRUITS EXCEPT BANANA </p>
+                <p> <i class="fas fa-check"></i> ALL VEGETABLES EXCEPT POTATOES </p>
+                <p> <i class="fas fa-check"></i> ALL FRUITS/VEGGIES EXCEPT POTATO/BANANA </p>
+                <p> <i class="fas fa-check"></i> 8 BANANAS AND 3 CUPS LOW FAT MILK </p>
+                <p> <i class="fas fa-check"></i> CHICKPEAS SALAD AND TOMATOES </p>
+                <p> <i class="fas fa-check"></i> BROCCOLI AND BROWN BREAD WITH PEANUT BUTTER </p>
+                <p> <i class="fas fa-check"></i> BROWN RICE AND VEGGIES/FRUITS </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            
+            <div class="month"><span><h3>8-Months</h3></span></div>
+            <div class="year"><span><h3>3-Years</h3></span></div>
+            <div class="price month"><span>₹</span>450.<span>00</span></div>
+            <div class="price year"><span>₹</span>4500.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> ALL FRUITS EXCEPT BANANA </p>
+                <p> <i class="fas fa-check"></i> ALL VEGETABLES EXCEPT POTATOES </p>
+                <p> <i class="fas fa-check"></i> ALL FRUITS/VEGGIES EXCEPT POTATO/BANANA </p>
+                <p> <i class="fas fa-check"></i> 8 BANANAS AND 3 CUPS LOW FAT MILK </p>
+                <p> <i class="fas fa-check"></i> CHICKPEAS SALAD AND TOMATOES </p>
+                <p> <i class="fas fa-check"></i> BROCCOLI AND BROWN BREAD WITH PEANUT BUTTER </p>
+                <p> <i class="fas fa-check"></i> BROWN RICE AND VEGGIES/FRUITS </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+let month = document.querySelector('.price-toggler .month');
+let year = document.querySelector('.price-toggler .year');
+let monthAmount = document.querySelectorAll('.box-container .box .month');
+let yearAmount = document.querySelectorAll('.box-container .box .year');
+
+year.onclick = () =>{
+    year.classList.add('active');
+    month.classList.remove('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'none' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'block' });
+};
+
+month.onclick = () =>{
+    year.classList.remove('active');
+    month.classList.add('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'block' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'none' });
+};
+
+</script>
+    
+</body>
+</html>

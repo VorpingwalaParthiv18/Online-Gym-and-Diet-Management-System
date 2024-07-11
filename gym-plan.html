@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gym Plans</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="gym-styles.css">
+
+</head>
+<body>
+    
+        
+      
+<div class="container">
+    <div class="logo"> <img src="login-logo-removebg.jpg" class="logo"> </div>
+<i><h1>Start Building <span> Yourself</span></h1></i>
+
+    <div class="price-toggler">
+        <span class="month active">monthly</span>
+        <span class="year">yearly</span>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="month"><span><h3>3-Months</h3></span></div>
+            <div class="year"><span><h3>1-Year</h3></span></div>
+            <div class="price month"><span>₹</span>350.<span>00</span></div>
+            <div class="price year"><span>₹</span>3000.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> CHEST+TRICEPS </p>
+                <p> <i class="fas fa-check"></i> BACK+BICEPS+ABS </p>
+                <p> <i class="fas fa-check"></i> SHOULDER+LEGS </p>
+                <p> <i class="fas fa-check"></i> UPPER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> LOWER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> CARDIO </p>
+                <p> <i class="fas fa-check"></i> REST </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            
+            <div class="month"><span><h3>6-Months</h3></span></div>
+            <div class="year"><span><h3>2-Years</h3></span></div>
+            <div class="price month"><span>₹</span>400.<span>00</span></div>
+            <div class="price year"><span>₹</span>4000.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> CHEST+TRICEPS </p>
+                <p> <i class="fas fa-check"></i> BACK+BICEPS+ABS </p>
+                <p> <i class="fas fa-check"></i> SHOULDER+LEGS </p>
+                <p> <i class="fas fa-check"></i> UPPER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> LOWER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> CARDIO </p>
+                <p> <i class="fas fa-check"></i> REST </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+        <div class="box">
+            
+            <div class="month"><span><h3>8-Months</h3></span></div>
+            <div class="year"><span><h3>3-Years</h3></span></div>
+            <div class="price month"><span>₹</span>500.<span>00</span></div>
+            <div class="price year"><span>₹</span>5000.<span>00</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> CHEST+TRICEPS </p>
+                <p> <i class="fas fa-check"></i> BACK+BICEPS+ABS </p>
+                <p> <i class="fas fa-check"></i> SHOULDER+LEGS </p>
+                <p> <i class="fas fa-check"></i> UPPER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> LOWER BODY+CARDIO </p>
+                <p> <i class="fas fa-check"></i> CARDIO </p>
+                <p> <i class="fas fa-check"></i> REST </p>
+            </div>
+            <a href="Payment/payment.html" class="btn">choose plan</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+let month = document.querySelector('.price-toggler .month');
+let year = document.querySelector('.price-toggler .year');
+let monthAmount = document.querySelectorAll('.box-container .box .month');
+let yearAmount = document.querySelectorAll('.box-container .box .year');
+
+year.onclick = () =>{
+    year.classList.add('active');
+    month.classList.remove('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'none' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'block' });
+};
+
+month.onclick = () =>{
+    year.classList.remove('active');
+    month.classList.add('active');
+
+    monthAmount.forEach(mo =>{ mo.style.display = 'block' });
+    yearAmount.forEach(yr =>{ yr.style.display = 'none' });
+};
+
+</script>
+    
+</body>
+</html>

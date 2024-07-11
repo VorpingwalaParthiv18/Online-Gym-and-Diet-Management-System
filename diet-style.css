@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0; 
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+}
+ .logo {
+  position: absolute;
+    width: 35%;
+    height: 40%;
+  }
+.container{
+  background: whitesmoke /*linear-gradient(#ddd 50%, crimson 50.1%)*/;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container .box-container{
+  max-width: 1200px;
+  margin:0 auto;
+  padding:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
+}
+
+.container .box-container .box{
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  border-radius: 50px;
+}
+
+/*.container .box-container .box:nth-child(2){
+  border:2px solid #000;
+}*/
+
+.container .box-container .box:nth-child(2) .btn{
+  background: #444;
+}
+
+.container .box-container .box:nth-child(2) .btn:hover{
+  background: crimson;
+}
+
+.container .box-container .box h3{
+  font-size: 25px;
+  padding:17px 0;
+  color:#444;
+}
+
+.container .box-container .box .price{
+  color:#fff;
+  background: crimson;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.container .box-container .box .price.year{
+  display: none;
+}
+
+.container .box-container .box .list{
+  margin:20px 0;
+}
+
+.container .box-container .box .list p{
+  padding:15px 0;
+  font-size: 17px;
+  color:#666;
+}
+
+.container .box-container .box .list p i{
+  padding-right: 5px;
+  color:crimson;
+}
+
+.container .box-container .box .btn{
+  margin:20px;
+  display: block;
+  font-size: 17px;
+  background: #444;
+  color:#fff;
+  padding:10px;
+  border-radius: 50px;
+}
+
+.container .box-container .box .btn:hover{
+  background: crimson;
+}
+
+.container .price-toggler{
+  margin-top: 20px;
+  display: inline-block;
+  padding:5px;
+  border:2px solid #000;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.container .price-toggler span{
+  padding:7px 30px;
+  cursor: pointer;
+  color:#444;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+.container .price-toggler span.active{
+  background: #444;
+  color:#fff;
+}
+
+@media (max-width:450px){
+  .container .box-container{
+    grid-template-columns: 1fr;
+  }
+}
+.container  h1{
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+.container h1 span{
+    font-weight: 200;
+}
